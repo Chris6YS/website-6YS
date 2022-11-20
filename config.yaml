@@ -1,7 +1,7 @@
-baseURL: https://6ys.netlify.app
+baseURL: https://6yardscreamers.netlify.app
 defaultContentLanguage: en
 theme: FeelIt
-title: FeelIt
+title: 6YS
 enableRobotsTXT: yes
 enableGitInfo: yes
 enableEmoji: yes
@@ -21,7 +21,7 @@ languages:
         - identifier: posts
           name: Posts
           post: ''
-          pre: ''
+          pre: <i class='fa fa-futbol fa-fw'></i>
           title: ''
           url: /posts/
           weight: 1
@@ -39,52 +39,49 @@ languages:
           title: ''
           url: /categories/
           weight: 3
-        - identifier: documentation
-          name: Docs
-          post: ''
-          pre: ''
-          title: ''
-          url: /categories/documentation/
-          weight: 4
         - identifier: about
           name: About
           post: ''
           pre: ''
           title: ''
           url: /about/
-          weight: 5
-        - identifier: github
+          weight: 4
+        - identifier: twitter
           name: ''
           post: ''
-          pre: <i class='fab fa-github fa-fw'></i>
-          title: GitHub
-          url: https://github.com/khusika/FeelIt
+          pre: <i class='fab fa-twitter fa-fw'></i>
+          title: Twitter
+          url: https://twitter.com/6yardscreamers
+          weight: 5
+        - identifier: Mastodon
+          name: ''
+          post: ''
+          pre: <i class='fab fa-mastodon fa-fw'></i>
+          title: Mastodon
+          url: https://mastodon.skrimmage.com/@Christina
           weight: 6
     paginate: 12
     params:
       about:
-        description: '[FeelIt](https://github.com/khusika/FeelIt) is a **clean**,
-          **elegant** but **advanced** blog theme for [Hugo](https://gohugo.io/) developed
-          by [Khusika](https://khusika.dev). It is based on the original [LoveIt Theme](https://github.com/dillonzq/LoveIt),
-          [LeaveIt Theme](https://github.com/liuzc/LeaveIt), and [KeepIt Theme](https://github.com/Fastbyte01/KeepIt).'
+        description: "Welcome to my blog where you'll mostly find some of my thoughts and ideas about football <i class='fas fa-futbol'></i>.   Some of my professional experience includes: <i class='fas fa-ruler'></i> psychometrics, <i class='fas fa-brain'></i> clinical psychology, <i class='far fa-chart-bar'></i> data analysis and football performance analysis. You can also find me <i class='fab fa-twitter'></i> **[here](https://www.twitter.com/6yardscreamers)** and <i class='fab fa-mastodon'></i> **[here](https://mastodon.skrimmage.com/@Christina)** . To get in touch, please send to: 6ysblog@gmail.com" 
         enable: yes
         param: yes
-        paramTitle: Personal Information
+        paramTitle: Attributes
         parameter:
-          - language: UI/UX
-            level: '80'
-          - language: HTML
-            level: '70'
-          - language: Go
+          - language: Shirt Tucking
+            level: '20'
+          - language: Footedness (Right)
+            level: '89'
+          - language: Sock Height
             level: '60'
         status:
-          - desc: FeelIt
-            faIcon: fas fa-building
-            title: Company
-          - desc: Freelancer
-            faIcon: fas fa-briefcase fa-fw
-            title: Occupation
-          - desc: Earth
+          - desc: She/Her
+            faIcon: far fa-id-card
+            title: Pronouns
+          - desc: English/French
+            faIcon: far fa-comment
+            title: Languages
+          - desc: Canada
             faIcon: fas fa-map-marker-alt
             title: Location
       app:
@@ -93,21 +90,21 @@ languages:
         svgFavicon: ''
         themeColor: '#ffffff'
         tileColor: '#da532c'
-        title: FeelIt
-      description: About FeelIt Theme
+        title: 6yardscreamers
+      description: About Christina
       home:
         posts:
           enable: yes
           imagePreview: yes
           paginate: 6
         profile:
-          avatarURL: /images/avatar.webp
+          avatarURL: /images/profile_1.png
           disclaimer: ''
           enable: yes
           gravatarEmail: ''
           social: yes
-          subtitle: A Clean, Elegant but Advanced Hugo Theme
-          title: ''
+          subtitle: "Mostly data driven reflections on football"
+          title: "- - - - -"
           typeit: yes
         rss: 10
       keywords:
@@ -120,245 +117,13 @@ languages:
           index: index.en
           searchKey: 7b7fbdfb7ee82ee61901f2c6b09b05be
         contentLength: 4000
-        enable: yes
+        enable: no
         highlightTag: em
         maxResultLength: 10
         placeholder: ''
         snippetLength: 30
         type: algolia
     weight: 1
-  fr:
-    copyright: This work is licensed under a Creative Commons Attribution-NonCommercial
-      4.0 International License.
-    hasCJKLanguage: no
-    languageCode: fr
-    languageName: Français
-    menu:
-      main:
-        - identifier: posts
-          name: Postes
-          post: ''
-          pre: ''
-          title: ''
-          url: /posts/
-          weight: 1
-        - identifier: tags
-          name: Balises
-          post: ''
-          pre: ''
-          title: ''
-          url: /tags/
-          weight: 2
-        - identifier: categories
-          name: Catégories
-          post: ''
-          pre: ''
-          title: ''
-          url: /categories/
-          weight: 3
-        - identifier: documentation
-          name: Docs
-          post: ''
-          pre: ''
-          title: ''
-          url: /categories/documentation/
-          weight: 4
-        - identifier: about
-          name: À propos
-          pre: ''
-          title: ''
-          url: /about/
-          weight: 5
-        - identifier: github
-          name: ''
-          post: ''
-          pre: <i class='fab fa-github fa-fw'></i>
-          title: GitHub
-          url: https://github.com/khusika/FeelIt
-          weight: 6
-    paginate: 12
-    params:
-      about:
-        description: '[FeelIt](https://github.com/khusika/FeelIt) is a **clean**,
-          **elegant** but **advanced** blog theme for [Hugo](https://gohugo.io/) developed
-          by [Khusika](https://khusika.dev). It is based on the original [LoveIt Theme](https://github.com/dillonzq/LoveIt),
-          [LeaveIt Theme](https://github.com/liuzc/LeaveIt), and [KeepIt Theme](https://github.com/Fastbyte01/KeepIt).'
-        enable: yes
-        param: yes
-        paramTitle: Informations Personnelles
-        parameter:
-          - language: UI/UX
-            level: '80'
-          - language: HTML
-            level: '70'
-          - language: Go
-            level: '60'
-        status:
-          - desc: FeelIt
-            faIcon: fas fa-building
-            title: Compagnie
-          - desc: Indépendant
-            faIcon: fas fa-briefcase fa-fw
-            title: Occupation
-          - desc: Terre
-            faIcon: fas fa-map-marker-alt
-            title: Lieu
-      app:
-        iconColor: '#5bbad5'
-        noFavicon: no
-        svgFavicon: ''
-        themeColor: '#ffffff'
-        tileColor: '#da532c'
-        title: FeelIt
-      description: À propos du thème FeelIt
-      home:
-        posts:
-          enable: yes
-          imagePreview: yes
-          paginate: 6
-        profile:
-          avatarURL: /images/avatar.webp
-          disclaimer: ''
-          enable: yes
-          gravatarEmail: ''
-          social: yes
-          subtitle: Un thème Hugo simple, élégant et efficace
-          title: ''
-          typeit: yes
-        rss: 10
-      keywords:
-        - Thème
-        - Hugo
-      search:
-        absoluteURL: no
-        algolia:
-          appID: UAL0NNJWXE
-          index: index.fr
-          searchKey: 7b7fbdfb7ee82ee61901f2c6b09b05be
-        contentLength: 4000
-        enable: yes
-        highlightTag: em
-        maxResultLength: 10
-        placeholder: ''
-        snippetLength: 30
-        type: algolia
-    weight: 3
-  zh-cn:
-    copyright: This work is licensed under a Creative Commons Attribution-NonCommercial
-      4.0 International License.
-    hasCJKLanguage: yes
-    languageCode: zh-CN
-    languageName: 简体中文
-    menu:
-      main:
-        - identifier: posts
-          name: 所有文章
-          post: ''
-          pre: ''
-          title: ''
-          url: /posts/
-          weight: 1
-        - identifier: tags
-          name: 标签
-          post: ''
-          pre: ''
-          title: ''
-          url: /tags/
-          weight: 2
-        - identifier: categories
-          name: 分类
-          post: ''
-          pre: ''
-          title: ''
-          url: /categories/
-          weight: 3
-        - identifier: documentation
-          name: 文档
-          pre: ''
-          title: ''
-          url: /categories/documentation/
-          weight: 4
-        - identifier: about
-          name: 关于
-          post: ''
-          pre: ''
-          title: ''
-          url: /about/
-          weight: 5
-        - identifier: github
-          name: ''
-          post: ''
-          pre: <i class='fab fa-github fa-fw'></i>
-          title: GitHub
-          url: https://github.com/khusika/FeelIt
-          weight: 6
-    paginate: 12
-    params:
-      about:
-        description: '[FeelIt](https://github.com/khusika/FeelIt) 是一个由 [Khusika](https://khusika.dev)
-          开发的**简洁**、**优雅**且**高效**的 [Hugo](https://gohugo.io/) 博客主题。 它的原型基于 [LoveIt
-          主题](https://github.com/dillonzq/LoveIt), [LeaveIt 主题](https://github.com/liuzc/LeaveIt),
-          和 [KeepIt 主题](https://github.com/Fastbyte01/KeepIt)。'
-        enable: yes
-        param: yes
-        paramTitle: 个人信息
-        parameter:
-          - language: UI/UX
-            level: '80'
-          - language: HTML
-            level: '70'
-          - language: Go
-            level: '60'
-        status:
-          - desc: FeelIt
-            faIcon: fas fa-building
-            title: 公司
-          - desc: 自由职业者
-            faIcon: fas fa-briefcase fa-fw
-            title: 职业
-          - desc: 地球
-            faIcon: fas fa-map-marker-alt
-            title: 地点
-      app:
-        iconColor: '#5bbad5'
-        noFavicon: no
-        svgFavicon: ''
-        themeColor: '#ffffff'
-        tileColor: '#da532c'
-        title: FeelIt
-      description: 关于 FeelIt 主题
-      home:
-        posts:
-          enable: yes
-          imagePreview: yes
-          paginate: 6
-        profile:
-          avatarURL: /images/avatar.webp
-          disclaimer: ''
-          enable: yes
-          gravatarEmail: ''
-          social: yes
-          subtitle: 一个简洁、优雅且高效的 Hugo 主题
-          title: ''
-          typeit: yes
-        rss: 10
-      keywords:
-        - Theme
-        - Hugo
-      search:
-        absoluteURL: no
-        algolia:
-          appID: UAL0NNJWXE
-          index: index.zh-cn
-          searchKey: 7b7fbdfb7ee82ee61901f2c6b09b05be
-        contentLength: 4000
-        enable: yes
-        highlightTag: em
-        maxResultLength: 10
-        placeholder: ''
-        snippetLength: 50
-        type: algolia
-    weight: 2
 params:
   SourceMap: no
   analytics:
@@ -391,17 +156,17 @@ params:
     icp: ''
     license: <a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/"
       target="_blank">CC BY-NC 4.0</a>
-    since: 2019
-  gitRepo: https://github.com/khusika/FeelIt
+    since: 2022
+  gitRepo: 
   header:
     desktopMode: fixed
     mobileMode: auto
     title:
       logo: ''
-      name: FeelIt
+      name: 6YS
       post: ''
-      pre: <i class='fas fa-hand-holding-heart fa-fw'></i>
-      rss: yes
+      pre: <i class='fas fa-futbol fas'></i>
+      rss: no
       typeit: no
   images: /logo.png
   list:
@@ -413,7 +178,7 @@ params:
       accessToken: ''
     privacy: no
     twitter:
-      enableDNT: no
+      enableDNT: yes
   page:
     cdnfontawesome: yes
     code:
@@ -467,7 +232,7 @@ params:
         pageSize: 10
         placeholder: ''
         recordIP: yes
-        serverURLs: https://leancloud.hugoloveit.com
+        serverURLs: 
         visitor: yes
       vssue:
         clientId: 85f66799bb256a5064be
@@ -480,7 +245,7 @@ params:
     fraction: yes
     hiddenFromHomePage: no
     hiddenFromSearch: no
-    improveArticle: https://github.com/khusika/FeelIt/edit/main/exampleSite/content/
+    improveArticle: 
     library:
       css: {}
       js: {}
@@ -515,11 +280,11 @@ params:
       Buffer: no
       Digg: no
       Evernote: no
-      Facebook: yes
+      Facebook: no
       Flipboard: no
-      HackerNews: yes
+      HackerNews: no
       Instapaper: no
-      Line: yes
+      Line: no
       Linkedin: no
       Mix: no
       Myspace: no
@@ -534,10 +299,10 @@ params:
       Tumblr: no
       Twitter: yes
       VK: no
-      Weibo: yes
+      Weibo: no
       Whatsapp: no
       Xing: no
-      enable: yes
+      enable: no
     toc:
       auto: yes
       enable: yes
@@ -564,27 +329,27 @@ params:
     Devto: ''
     Douban: ''
     Dribbble: ''
-    Email: xxxx@xxxx.com
-    Facebook: xxxx
+    Email: '6ysblog@gmail.com'
+    Facebook: ''
     Fivehundredpx: ''
     Flickr: ''
     Foursquare: ''
     FreeCodeCamp: ''
-    GitHub: xxxx
+    GitHub: ''    
     Gitea: ''
     Gitlab: ''
     Goodreads: ''
     Googlescholar: ''
     Hackernews: ''
-    Instagram: xxxx
+    Instagram: ''
     Jsfiddle: ''
     Keybase: ''
     Kickstarter: ''
     Lastfm: ''
     Linkedin: ''
     Mastodon:
-      id: '@xxxx'
-      prefix: https://mastodon.technology/
+      id: '@Christina'
+      prefix: 'https://mastodon.skrimmage.com/'
     Matrix: ''
     Medium: ''
     Mix: ''
@@ -593,7 +358,7 @@ params:
     Paypal: ''
     Pinterest: ''
     Quora: ''
-    RSS: yes
+    RSS: no
     Reddit: ''
     Researchgate: ''
     Resume: ''
@@ -605,11 +370,11 @@ params:
     Stackoverflow: ''
     Steam: ''
     Strava: ''
-    Telegram: xxxx
+    Telegram: ''
     Thingiverse: ''
     Tumblr: ''
     Twitch: ''
-    Twitter: xxxx
+    Twitter: 6yardscreamers
     VK: ''
     Vine: ''
     Weibo: ''
@@ -619,7 +384,7 @@ params:
     Xing: ''
     Youtubechannel: ''
     Youtubecustom: ''
-    Youtubelegacy: xxxx
+    Youtubelegacy: ''
     Zhihu: ''
     xda: ''
   typeit:
@@ -658,7 +423,7 @@ markup:
 author:
   email: ''
   link: ''
-  name: xxxx
+  name: .
 sitemap:
   changefreq: weekly
   filename: sitemap.xml
@@ -667,9 +432,9 @@ Permalinks:
   posts: :filename
 privacy:
   googleAnalytics:
-    anonymizeIP: no
+    anonymizeIP: yes
     disable: no
-    respectDoNotTrack: no
+    respectDoNotTrack: yes
     useSessionStorage: no
   instagram: {}
   twitter:
