@@ -1,0 +1,113 @@
+---
+title: "World Cup National Anthems, Emotions & Audio Features"
+author: "Christina"
+date: "2022-12-06"
+categories: ["Data Viz"]
+tags: ["R Markdown", "Football", "World Cup", "Emotions", "Spotifyr", "ggplot2"]
+featuredImage: "/images/plot_banner.png"
+bibliography: references.bib
+twitterImg: "/images/plot_banner.png"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<body style="background-color: ghostwhite;">
+
+<font size="4.5">
+
+Outburst of emotions in football are common and can be observed by watching players, managers, supporters, and even referees. The emotions revealed at tournaments such as the FIFA World Cup are visible in many situations. On this international stage, the playing of national anthems prior to kick-off frequently evokes strong expressions of emotions and, for some, may represent a unique affect driven experience.
+
+------------------------------------------------------------------------
+
+<center>
+
+<blockquote class="twitter-tweet">
+
+<p lang="es" dir="ltr">
+
+LA EMOCIÓN DE ALEXIS VEGA EN SU PRIMER MUNDIAL 🇲🇽 ❤<a href="https://twitter.com/hashtag/Qatar2022?src=hash&amp;ref_src=twsrc%5Etfw">#Qatar2022</a> <a href="https://twitter.com/hashtag/FIFAWorldCup?src=hash&amp;ref_src=twsrc%5Etfw">#FIFAWorldCup</a> <a href="https://t.co/FJh64baa8h">pic.twitter.com/FJh64baa8h</a>
+
+</p>
+
+--- ESPN.com.mx (@ESPNmx) <a href="https://twitter.com/ESPNmx/status/1595087060574294017?ref_src=twsrc%5Etfw">November 22, 2022</a>
+
+</blockquote>
+
+```{=html}
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+```
+</center>
+
+------------------------------------------------------------------------
+
+The *circumplex model of emotion* developed by James Russell [@russell1980] is a commonly cited framework for defining dimensions of affective states [@remington2000].[^1] This model suggests that emotional states are processed and represented along the two dimensions of valence (horizontal axis) and arousal/activity (vertical axis) [@scott2010] (Figure 1).
+
+[^1]: Please note that there are important limitations and criticisms to this model of emotions that go beyond the scope of this article.
+
+<center>![Figure 1. Russell's 2 dimensional model of emotions. Adapted from Russell (1980)](/posts/new-post-test2/article_files/Russell1980_model_annot1.png){width="500"}</center>
+
+------------------------------------------------------------------------
+
+Research investigating the interaction of emotions and music is vast [@juslin2013]. Many models have been proposed [@eerola2010] and interest in the study of emotions and music recommendation systems is growing [@schedl2018]. Measures similar to Russell's dimensions are found in [Spotify's track audio features](https://developer.spotify.com/documentation/web-api/reference/#/operations/get-audio-features) [^2]. Spotify defines their valence and energy (a proxy for arousal) measures as:
+
+[^2]: The validity and reliability of these metrics merits further investigation therefore they should be interpreted with caution.
+
+> ##### **Valence:** *"A measure from 0.0 to 1.0 describing the musical positiveness conveyed by a track. Tracks with high valence sound more positive (e.g. happy, cheerful, euphoric), while tracks with low valence sound more negative (e.g. sad, depressed, angry)."*
+>
+> ##### **Energy:** *"Energy is a measure from 0.0 to 1.0 and represents a perceptual measure of intensity and activity. Typically, energetic tracks feel fast, loud, and noisy. For example, death metal has high energy, while a Bach prelude scores low on the scale. Perceptual features contributing to this attribute include dynamic range, perceived loudness, timbre, onset rate, and general entropy."*
+
+|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+|------------------------------------------------------------------------|
+| Using the *Spotifyr* package [@spotifyr-2], Spotify audio features of valence and energy for the 32 national anthems of the participating countries at the 2022 FIFA Men's World Cup were plotted via *ggplot2* [@ggplot2-2]. This descriptive analysis is not without limitations. For example, results can vary depending on each artists' interpretation of the song. That being said, the current analysis' results are shown in Figure 2 below. Does Wales' anthem strike a miserable nerve? Can we explain England's bore draw tendencies via their low energy score? Conversely, did Costa Rica concede seven to Spain because their anthem is too energetic? To be clear, I don't actually believe any of this relates to performance on the pitch, these are just some of my silly thoughts. |
+
+<p>
+
+<center>![Figure 2. National Anthems of The 2022 World Cup: Emotions and Audio Features](/posts/new-post-test2/article_files/plot1_final.png)</center>
+
+</p>
+
+------------------------------------------------------------------------
+
+<center>
+
+<blockquote class="twitter-tweet">
+
+<p lang="en" dir="ltr">
+
+Can't stop thinking about this woman during the Welsh National Anthem at the World Cup. Go on luv ! <a href="https://t.co/VpYn1N4n5C">pic.twitter.com/VpYn1N4n5C</a>
+
+</p>
+
+--- Cam All Ye Faithful 🎄 (@camruined) <a href="https://twitter.com/camruined/status/1594827994106929158?ref_src=twsrc%5Etfw">November 21, 2022</a>
+
+</blockquote>
+
+```{=html}
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+```
+</center>
+
+<center>
+
+<blockquote class="twitter-tweet">
+
+<p lang="en" dir="ltr">
+
+Costa Rica's fans were brilliant and their players belted out the anthem with such passion but it seemed to take all of their intensity out of them. Spain could have won that game wearing slippers <a href="https://twitter.com/hashtag/ESPCRC?src=hash&amp;ref_src=twsrc%5Etfw">#ESPCRC</a> <a href="https://twitter.com/talkSPORT?ref_src=twsrc%5Etfw">@talkSPORT</a> <a href="https://twitter.com/hashtag/TSWorldCup?src=hash&amp;ref_src=twsrc%5Etfw">#TSWorldCup</a> <a href="https://t.co/6AGtiGP7Dj">pic.twitter.com/6AGtiGP7Dj</a>
+
+</p>
+
+--- Nigel Adderley (@nadderley) <a href="https://twitter.com/nadderley/status/1595489478428311561?ref_src=twsrc%5Etfw">November 23, 2022</a>
+
+</blockquote>
+
+```{=html}
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+```
+</center>
+
+------------------------------------------------------------------------
+
+</font>

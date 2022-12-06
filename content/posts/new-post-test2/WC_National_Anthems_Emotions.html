@@ -1,0 +1,112 @@
+---
+title: "World Cup National Anthems, Emotions & Audio Features"
+author: "Christina"
+date: "2022-12-06"
+categories: ["Data Viz"]
+tags: ["R Markdown", "Football", "World Cup", "Emotions", "Spotifyr", "ggplot2"]
+featuredImage: "/images/plot_banner.png"
+bibliography: references.bib
+twitterImg: "/images/plot_banner.png"
+---
+
+
+
+<body style="background-color: ghostwhite;">
+<p><font size="4.5"></p>
+<p>Outburst of emotions in football are common and can be observed by watching players, managers, supporters, and even referees. The emotions revealed at tournaments such as the FIFA World Cup are visible in many situations. On this international stage, the playing of national anthems prior to kick-off frequently evokes strong expressions of emotions and, for some, may represent a unique affect driven experience.</p>
+<hr />
+<center>
+<blockquote class="twitter-tweet">
+<p lang="es" dir="ltr">
+<p>LA EMOCIÓN DE ALEXIS VEGA EN SU PRIMER MUNDIAL 🇲🇽 ❤<a href="https://twitter.com/hashtag/Qatar2022?src=hash&amp;ref_src=twsrc%5Etfw">#Qatar2022</a> <a href="https://twitter.com/hashtag/FIFAWorldCup?src=hash&amp;ref_src=twsrc%5Etfw">#FIFAWorldCup</a> <a href="https://t.co/FJh64baa8h">pic.twitter.com/FJh64baa8h</a></p>
+</p>
+<p>— ESPN.com.mx (<span class="citation">(<a href="#ref-ESPNmx" role="doc-biblioref"><strong>ESPNmx?</strong></a>)</span>) <a href="https://twitter.com/ESPNmx/status/1595087060574294017?ref_src=twsrc%5Etfw">November 22, 2022</a></p>
+</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</center>
+<hr />
+<p>The <em>circumplex model of emotion</em> developed by James Russell <span class="citation">(<a href="#ref-russell1980" role="doc-biblioref">Russell 1980</a>)</span> is a commonly cited framework for defining dimensions of affective states <span class="citation">(<a href="#ref-remington2000" role="doc-biblioref">Remington, Fabrigar, and Visser 2000</a>)</span>.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> This model suggests that emotional states are processed and represented along the two dimensions of valence (horizontal axis) and arousal/activity (vertical axis) <span class="citation">(<a href="#ref-scott2010" role="doc-biblioref">Scott, Sauter, and McGettigan 2010</a>)</span> (Figure 1).</p>
+<center>
+<div class="figure">
+<img src="/posts/new-post-test2/article_files/Russell1980_model_annot1.png" width="500" alt="" />
+<p class="caption">Figure 1. Russell’s 2 dimensional model of emotions. Adapted from Russell (1980)</p>
+</div>
+</center>
+<hr />
+<p>Research investigating the interaction of emotions and music is vast <span class="citation">(<a href="#ref-juslin2013" role="doc-biblioref">Juslin 2013</a>)</span>. Many models have been proposed <span class="citation">(<a href="#ref-eerola2010" role="doc-biblioref">Eerola and Vuoskoski 2010</a>)</span> and interest in the study of emotions and music recommendation systems is growing <span class="citation">(<a href="#ref-schedl2018" role="doc-biblioref">Schedl et al. 2018</a>)</span>. Measures similar to Russell’s dimensions are found in <a href="https://developer.spotify.com/documentation/web-api/reference/#/operations/get-audio-features">Spotify’s track audio features</a> <a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>. Spotify defines their valence and energy (a proxy for arousal) measures as:</p>
+<blockquote>
+<h5 id="valence-a-measure-from-0.0-to-1.0-describing-the-musical-positiveness-conveyed-by-a-track.-tracks-with-high-valence-sound-more-positive-e.g.-happy-cheerful-euphoric-while-tracks-with-low-valence-sound-more-negative-e.g.-sad-depressed-angry."><strong>Valence:</strong> <em>“A measure from 0.0 to 1.0 describing the musical positiveness conveyed by a track. Tracks with high valence sound more positive (e.g. happy, cheerful, euphoric), while tracks with low valence sound more negative (e.g. sad, depressed, angry).”</em></h5>
+<h5 id="energy-energy-is-a-measure-from-0.0-to-1.0-and-represents-a-perceptual-measure-of-intensity-and-activity.-typically-energetic-tracks-feel-fast-loud-and-noisy.-for-example-death-metal-has-high-energy-while-a-bach-prelude-scores-low-on-the-scale.-perceptual-features-contributing-to-this-attribute-include-dynamic-range-perceived-loudness-timbre-onset-rate-and-general-entropy."><strong>Energy:</strong> <em>“Energy is a measure from 0.0 to 1.0 and represents a perceptual measure of intensity and activity. Typically, energetic tracks feel fast, loud, and noisy. For example, death metal has high energy, while a Bach prelude scores low on the scale. Perceptual features contributing to this attribute include dynamic range, perceived loudness, timbre, onset rate, and general entropy.”</em></h5>
+</blockquote>
+<table>
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>Using the <em>Spotifyr</em> package <span class="citation">(<a href="#ref-spotifyr-2" role="doc-biblioref">Thompson et al. 2021</a>)</span>, Spotify audio features of valence and energy for the 32 national anthems of the participating countries at the 2022 FIFA Men’s World Cup were plotted via <em>ggplot2</em> <span class="citation">(<a href="#ref-ggplot2-2" role="doc-biblioref">Wickham 2016</a>)</span>. This descriptive analysis is not without limitations. For example, results can vary depending on each artists’ interpretation of the song. That being said, the current analysis’ results are shown in Figure 2 below. Does Wales’ anthem strike a miserable nerve? Can we explain England’s bore draw tendencies via their low energy score? Conversely, did Costa Rica concede seven to Spain because their anthem is too energetic? To be clear, I don’t actually believe any of this relates to performance on the pitch, these are just some of my silly thoughts.</td>
+</tr>
+</tbody>
+</table>
+<p>
+<center>
+<div class="figure">
+<img src="/posts/new-post-test2/article_files/plot1_final.png" alt="" />
+<p class="caption">Figure 2. National Anthems of The 2022 World Cup: Emotions and Audio Features</p>
+</div>
+</center>
+</p>
+<hr />
+<center>
+<blockquote class="twitter-tweet">
+<p lang="en" dir="ltr">
+<p>Can’t stop thinking about this woman during the Welsh National Anthem at the World Cup. Go on luv ! <a href="https://t.co/VpYn1N4n5C">pic.twitter.com/VpYn1N4n5C</a></p>
+</p>
+<p>— Cam All Ye Faithful 🎄 (<span class="citation">(<a href="#ref-camruined" role="doc-biblioref"><strong>camruined?</strong></a>)</span>) <a href="https://twitter.com/camruined/status/1594827994106929158?ref_src=twsrc%5Etfw">November 21, 2022</a></p>
+</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</center>
+<center>
+<blockquote class="twitter-tweet">
+<p lang="en" dir="ltr">
+<p>Costa Rica’s fans were brilliant and their players belted out the anthem with such passion but it seemed to take all of their intensity out of them. Spain could have won that game wearing slippers <a href="https://twitter.com/hashtag/ESPCRC?src=hash&amp;ref_src=twsrc%5Etfw">#ESPCRC</a> <a href="https://twitter.com/talkSPORT?ref_src=twsrc%5Etfw"><span class="citation">(<a href="#ref-talkSPORT" role="doc-biblioref"><strong>talkSPORT?</strong></a>)</span></a> <a href="https://twitter.com/hashtag/TSWorldCup?src=hash&amp;ref_src=twsrc%5Etfw">#TSWorldCup</a> <a href="https://t.co/6AGtiGP7Dj">pic.twitter.com/6AGtiGP7Dj</a></p>
+</p>
+<p>— Nigel Adderley (<span class="citation">(<a href="#ref-nadderley" role="doc-biblioref"><strong>nadderley?</strong></a>)</span>) <a href="https://twitter.com/nadderley/status/1595489478428311561?ref_src=twsrc%5Etfw">November 23, 2022</a></p>
+</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</center>
+<hr />
+<p></font></p>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-eerola2010" class="csl-entry">
+Eerola, Tuomas, and Jonna K. Vuoskoski. 2010. <span>“A Comparison of the Discrete and Dimensional Models of Emotion in Music.”</span> <em>Psychology of Music</em> 39 (1): 18–49. <a href="https://doi.org/10.1177/0305735610362821">https://doi.org/10.1177/0305735610362821</a>.
+</div>
+<div id="ref-juslin2013" class="csl-entry">
+Juslin, Patrik N. 2013. <span>“What Does Music Express? Basic Emotions and Beyond.”</span> <em>Frontiers in Psychology</em> 4. <a href="https://doi.org/10.3389/fpsyg.2013.00596">https://doi.org/10.3389/fpsyg.2013.00596</a>.
+</div>
+<div id="ref-remington2000" class="csl-entry">
+Remington, Nancy A., Leandre R. Fabrigar, and Penny S. Visser. 2000. <span>“Reexamining the Circumplex Model of Affect.”</span> <em>Journal of Personality and Social Psychology</em> 79 (2): 286–300. <a href="https://doi.org/10.1037/0022-3514.79.2.286">https://doi.org/10.1037/0022-3514.79.2.286</a>.
+</div>
+<div id="ref-russell1980" class="csl-entry">
+Russell, James A. 1980. <span>“A Circumplex Model of Affect.”</span> <em>Journal of Personality and Social Psychology</em> 39 (6): 1161–78. <a href="https://doi.org/10.1037/h0077714">https://doi.org/10.1037/h0077714</a>.
+</div>
+<div id="ref-schedl2018" class="csl-entry">
+Schedl, Markus, Hamed Zamani, Ching-Wei Chen, Yashar Deldjoo, and Mehdi Elahi. 2018. <span>“Current Challenges and Visions in Music Recommender Systems Research.”</span> <em>International Journal of Multimedia Information Retrieval</em> 7 (2): 95–116. <a href="https://doi.org/10.1007/s13735-018-0154-2">https://doi.org/10.1007/s13735-018-0154-2</a>.
+</div>
+<div id="ref-scott2010" class="csl-entry">
+Scott, Sophie K., Disa Sauter, and Carolyn McGettigan. 2010. <span>“Brain Mechanisms for Processing Perceived Emotional Vocalizations in Humans.”</span> In, 187–97. Elsevier. <a href="https://doi.org/10.1016/b978-0-12-374593-4.00019-x">https://doi.org/10.1016/b978-0-12-374593-4.00019-x</a>.
+</div>
+<div id="ref-spotifyr-2" class="csl-entry">
+Thompson, Charlie, Daniel Antal, Josiah Parry, Donal Phipps, and Tom Wolff. 2021. <span>“Spotifyr: R Wrapper for the ’Spotify’ Web API.”</span> <a href="https://CRAN.R-project.org/package=spotifyr">https://CRAN.R-project.org/package=spotifyr</a>.
+</div>
+<div id="ref-ggplot2-2" class="csl-entry">
+Wickham, Hadley. 2016. <span>“Ggplot2: Elegant Graphics for Data Analysis.”</span> <a href="https://ggplot2.tidyverse.org">https://ggplot2.tidyverse.org</a>.
+</div>
+</div>
+<div class="footnotes footnotes-end-of-document">
+<hr />
+<ol>
+<li id="fn1"><p>Please note that there are important limitations and criticisms to this model of emotions that go beyond the scope of this article.<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>The validity and reliability of these metrics merits further investigation therefore they should be interpreted with caution.<a href="#fnref2" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
